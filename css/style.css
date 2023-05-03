@@ -1,0 +1,513 @@
+:root {
+    --bg-primary: #f8f9fa;
+    --color-primary: #a2c0be;
+    --section-padding: 50px 0;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width: 65%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section,
+footer {
+    padding: var(--section-padding);
+}
+
+p {
+    color: #999999;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.paw-icons .fa-paw:nth-of-type(2) {
+    color: var(--color-primary);
+    font-size: 30px;
+    margin: 0 10px 20px 10px;
+    position: relative;
+}
+
+.paw-icons .fa-paw:first-of-type,
+.paw-icons .fa-paw:last-of-type {
+    color: var(--color-primary);
+    opacity: 30%;
+    font-size: 16px;
+}
+
+.paw-icons .fa-paw:first-of-type {
+    transform: rotate(-45deg);
+}
+
+.paw-icons .fa-paw:last-of-type {
+    transform: rotate(45deg);
+}
+
+.img-div img {
+    width: 100%;
+    transition: box-shadow 0.4s;
+}
+
+.img-div img:not(.no-hover):hover {
+    box-shadow: 10px 10px 0 0 var(--color-primary);
+}
+
+.btn {
+    font-size: 16px;
+    border-radius: 30px;
+    padding: 10px 30px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.btn-primary {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: white;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    border-color: black;
+    background-color: black;
+    color: white;
+}
+
+.title {
+    margin-bottom: 80px;
+}
+
+/* --------------------------------- */
+nav {
+    background-color: white;
+    box-shadow: 0 0px 8px 0 rgba(128, 128, 128, 0.2);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+nav .row .logo h1 a {
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+    font-size: 35px;
+}
+
+nav .row .logo h1 a span {
+    color: var(--color-primary);
+}
+
+nav .row .menu ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav .row .menu ul li {
+    margin-right: 50px;
+}
+
+nav .row .menu ul li a {
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav .row .menu ul li a:hover {
+    color: black;
+}
+
+nav .row .bars-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ----------main------------------- */
+
+main {
+    background-color: var(--bg-primary);
+}
+
+
+main .row .text p {
+    color: #999999;
+}
+
+/* -----------------welcome------------------- */
+
+
+.welcome .row .text h2,
+.welcome .row .text p,
+.welcome .row .text button {
+    margin: 10px 0;
+}
+
+/* ------------about------------------- */
+
+.about .row .text .subtitle {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+
+.about .row .text p i {
+    margin: 10px 10px 10px 0;
+    font-size: 20px;
+    color: var(--color-primary);
+
+}
+
+/* -------------trainers------------- */
+.trainers {
+    background-color: var(--color-primary);
+}
+
+.trainers p,
+.trainers .paw-icons .fa-paw {
+    color: white;
+}
+
+
+
+.trainers .person img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.trainers .person p {
+    margin: 30px 0;
+}
+
+.trainers .person .social-icons i {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trainers .person .social-icons i:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+/* medai screen */
+
+/* XL */
+@media screen AND (min-width: 1200px) {
+
+    .container {
+        width: 65%;
+    }
+
+
+    nav .row .bars-icon {
+        display: none;
+    }
+
+    .row .text,
+    .row .img-div {
+        width: 48%;
+    }
+
+    main .row {
+        height: 100vh;
+    }
+
+    main .row .img-div {
+        align-self: flex-end;
+    }
+
+    main .row .img-div img {
+        width: 445px;
+    }
+
+    main .row .text h1 {
+        font-size: 64px;
+    }
+
+    main .row .text p {
+        font-size: 19.2px;
+    }
+
+    .welcome .first .text {
+        text-align: right;
+        padding-right: 80px;
+        order: -1;
+    }
+
+    .welcome .second .text {
+        text-align: left;
+        padding-left: 80px;
+    }
+
+    .about .row .text .subtitle {
+        padding-right: 100px;
+    }
+
+    .trainers .person {
+        width: 30%;
+    }
+
+}
+
+/* L */
+@media screen AND (min-width: 992px) AND (max-width:1200px) {
+    .container {
+        width: 70%;
+    }
+
+    main .row {
+        height: 100vh;
+    }
+
+    nav .row .bars-icon {
+        display: none;
+    }
+
+    .row .text,
+    .row .img-div {
+        width: 48%;
+    }
+
+    main .row .img-div {
+        align-self: flex-end;
+    }
+
+    main .row .img-div img {
+        width: 370px;
+    }
+
+    main .row .text h1 {
+        font-size: 64px;
+    }
+
+    main .row .text p {
+        font-size: 19.2px;
+    }
+
+    .welcome .first .text {
+        text-align: right;
+        padding-right: 80px;
+        order: -1;
+    }
+
+    .welcome .second .text {
+        text-align: left;
+        padding-left: 80px;
+    }
+
+    .about .row .text .subtitle {
+        padding-right: 100px;
+    }
+
+    .trainers .person {
+        width: 30%;
+    }
+}
+
+
+/* M */
+@media screen AND (min-width: 768px) AND (max-width:992px) {
+    .container {
+        width: 75%;
+    }
+
+    nav .row .menu {
+        width: 100%;
+        display: none;
+    }
+
+    nav .row .menu ul {
+        margin-top: 20px;
+        flex-flow: column nowrap;
+    }
+
+    nav .row .menu ul li {
+        margin: 10px 0;
+        border-bottom: 1px solid grey;
+    }
+
+    main .row {
+        padding-top: 100px;
+        flex-flow: column nowrap;
+        justify-content: flex-end;
+        text-align: center;
+    }
+
+    main .row .img-div {
+        padding-top: 100px;
+        align-self: center;
+    }
+
+    main .row .img-div img {
+        width: 370px;
+    }
+
+    .welcome .row {
+        margin-bottom: 20px;
+    }
+
+    .row .text,
+    .row .img-div:not(.main-pic-div) {
+        margin-bottom: 10px;
+    }
+
+    .about .row .text {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .trainers .person {
+        width: 45%;
+        margin-bottom: 40px;
+    }
+
+}
+
+/* S */
+@media screen AND (min-width: 600px) AND (max-width:768px) {
+    .container {
+        width: 80%;
+    }
+
+    nav .row .menu {
+        width: 100%;
+        display: none;
+    }
+
+    nav .row .menu ul {
+        margin-top: 20px;
+        flex-flow: column nowrap;
+    }
+
+    nav .row .menu ul li {
+        margin: 10px 0;
+        border-bottom: 1px solid grey;
+    }
+
+    main .row {
+        padding-top: 100px;
+        flex-flow: column nowrap;
+        justify-content: flex-end;
+        text-align: center;
+    }
+
+    main .row .img-div {
+        padding-top: 100px;
+        align-self: center;
+    }
+
+    main .row .img-div img {
+        width: 80%;
+    }
+
+    .welcome .row {
+        margin-bottom: 20px;
+    }
+
+    .row .text,
+    .row .img-div:not(.main-pic-div) {
+        margin-bottom: 10px;
+    }
+
+    .about .row .text {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .trainers .person {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+
+/* XS */
+@media screen AND (max-width:600px) {
+    .container {
+        width: 85%;
+    }
+
+
+    nav .row .menu {
+        width: 100%;
+        display: none;
+    }
+
+    nav .row .menu ul {
+        margin-top: 20px;
+        flex-flow: column nowrap;
+    }
+
+    nav .row .menu ul li {
+        margin: 10px 0;
+        border-bottom: 1px solid grey;
+    }
+
+    main .row {
+        padding-top: 100px;
+        flex-flow: column nowrap;
+        justify-content: flex-end;
+        text-align: center;
+    }
+
+    main .row .img-div {
+        padding-top: 100px;
+        align-self: center;
+    }
+
+    main .row .img-div img {
+        width: 80%;
+    }
+
+    .welcome .row {
+        margin-bottom: 20px;
+    }
+
+    .row .text,
+    .row .img-div:not(.main-pic-div) {
+        margin-bottom: 10px;
+    }
+
+    .about .row .text {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .trainers .person {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
