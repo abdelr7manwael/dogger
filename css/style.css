@@ -139,7 +139,9 @@ nav .row .menu ul li a {
     font-size: 17px;
 }
 
-nav .row .menu ul li a:hover {
+nav .row .menu ul li a:hover,
+nav .row .menu ul li .active
+{
     color: black;
 }
 

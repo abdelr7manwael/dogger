@@ -18,13 +18,13 @@
             <div class="row">
                 <div class="logo">
                     <h1>
-                        <a href="#">Dogger <span>.</span> </a>
+                        <a href="#">Dogger<span>.</span> </a>
                     </h1>
                 </div>
-                <i class="fa-solid fa-bars bars-icon"></i>
+                <i class="fa-solid fa-bars bars-icon" id="bars-icon"></i>
                 <div class="menu">
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="#" class="active">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Trainers</a></li>
                         <li><a href="#">Contact</a></li>
@@ -203,6 +203,17 @@
     </section>
 
 
-    
+    <script>
+        var btn = document.getElementById('bars-icon');
+        var menu = document.querySelector('nav .row .menu');
+
+        btn.addEventListener("click", ()=>{
+            if(menu.style.display == "flex"){
+                menu.style.display = "none";
+            }else{
+                menu.style.display = "flex";
+            }
+        })
+    </script>
 </body>
 </html>
